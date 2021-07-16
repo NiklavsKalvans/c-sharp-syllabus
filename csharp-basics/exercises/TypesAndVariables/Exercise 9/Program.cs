@@ -8,8 +8,6 @@ namespace Exercise_9
         {
             const int secondsInHour = 3600;
             const int secondsInMin = 60;
-            const int metersInKm = 1000;
-            const double KmToMiles = 0.621;
             const double MetersPerSecondToKmPerHour = 3.6;
             const double MetersPerSecondToMilesPerHour = 2.237;
 
