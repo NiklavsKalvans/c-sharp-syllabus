@@ -38,6 +38,7 @@ namespace Exercise_5
             Console.WriteLine($"Class - {course7}, teacher - {teacher7}.");
             Console.WriteLine($"Class - {course8}, teacher - {teacher8}.");
             Console.WriteLine("+------------------------------------------------------------+");
+            Console.ReadKey();
         }
     }
 }
