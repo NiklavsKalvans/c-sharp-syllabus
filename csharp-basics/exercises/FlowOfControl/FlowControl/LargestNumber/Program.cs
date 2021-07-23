@@ -7,23 +7,23 @@ namespace LargestNumber
         static void Main(string[] args)
         {
             Console.WriteLine("Input the 1st number: ");
-            var input1 = Console.ReadLine();
+            int input1 = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Input the 2nd number: ");
-            var input2 = Console.ReadLine();
+            int input2 = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Input the 3rd number: ");
-            var input3 = Console.ReadLine();
+            int input3 = int.Parse(Console.ReadLine());
          
-            if (Convert.ToInt32(input1) > Convert.ToInt32(input2) && Convert.ToInt32(input1) > Convert.ToInt32(input3))
+            if (input1 > input2 && input1 > input3)
             {
                 Console.WriteLine($"The largest number you entered is: {input1}");
             }
-            else if (Convert.ToInt32(input2) > Convert.ToInt32(input1) && Convert.ToInt32(input2) > Convert.ToInt32(input3))
+            else if (input2 > input1 && input2 > input3)
             {
                 Console.WriteLine($"The largest number you entered is: {input2}");
             }
-            else if (Convert.ToInt32(input3) > Convert.ToInt32(input1) && Convert.ToInt32(input3) > Convert.ToInt32(input2))
+            else if (input3 > input1 && input3 > input2)
             {
                 Console.WriteLine($"The largest number you entered is: {input3}");
             }
