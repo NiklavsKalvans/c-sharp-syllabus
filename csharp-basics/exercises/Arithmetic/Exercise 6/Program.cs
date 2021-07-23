@@ -8,10 +8,9 @@ namespace Exercise_6
         {
             for (int i = 1; i <= 110; i++)
             {
-                    if ((i-1) % 11 == 0)
+                if ((i-1) % 11 == 0)
                     Console.WriteLine();
-
-                     if (i % 105 == 0)
+                if (i % 105 == 0)
                     Console.Write("CozaLozaWoza ");
                 else if (i % 35 == 0)
                     Console.Write("LozaWoza ");
@@ -25,7 +24,8 @@ namespace Exercise_6
                     Console.Write("Loza ");
                 else if (i % 3 == 0)
                     Console.Write("Coza ");
-                else Console.Write($"{i} ");
+                else 
+                    Console.Write($"{i} ");
             }
         }
     }

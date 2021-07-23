@@ -10,7 +10,7 @@ namespace CalculateArea
     {
         public static double areaOfCircle(decimal radius)
         {
-            if (radius < 0)
+            if (radius <= 0)
             {
                 throw new Exception("Radius must be a positive number");
             }
@@ -20,7 +20,7 @@ namespace CalculateArea
 
         public static double areaOfRectangle(decimal length, decimal width)
         {
-            if (length < 0 || width < 0)
+            if (length <= 0 || width <= 0)
             {
                 throw new Exception("Both lenght and width must be positive numbers");
             }
@@ -30,7 +30,7 @@ namespace CalculateArea
 
         public static double areaOfTriangle(decimal ground, decimal h)
         {
-            if (ground < 0 || h < 0)
+            if (ground <= 0 || h <= 0)
             {
                 throw new Exception("Both base and height must be positive numbers");
             }

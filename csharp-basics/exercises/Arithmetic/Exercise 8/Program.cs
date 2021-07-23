@@ -26,17 +26,14 @@ namespace Exercise_8
             double salary3 = Convert.ToDouble(CalculateSalary(hoursWorked3, workersPay3));
 
             Console.WriteLine("Here is wage report of this month!");
-            Console.WriteLine($"{worker1} made {salary1} this month. If your salary is 0, that means you worked too much or are not getting paid enough!");
-            Console.WriteLine($"{worker2} made {salary2} this month. If your salary is 0, that means you worked too much or are not getting paid enough!");
-            Console.WriteLine($"{worker3} made {salary3} this month. If your salary is 0, that means you worked too much or are not getting paid enough!");
+            Console.WriteLine($"{worker1} made {salary1} this month.");
+            Console.WriteLine($"{worker2} made {salary2} this month.");
+            Console.WriteLine($"{worker3} made {salary3} this month.");
+            Console.WriteLine("If your salary is 0, that means you worked too much or are not getting paid enough!");
         }
         private static double? CalculateSalary(double hoursWorked, double workersPay)
         {
-            if (hoursWorked > _maxWeeklyHours)
-            {
-                return null;
-            }
-            else if (workersPay < _minSalary)
+            if (hoursWorked > _maxWeeklyHours || workersPay < _minSalary)
             {
                 return null;
             }
