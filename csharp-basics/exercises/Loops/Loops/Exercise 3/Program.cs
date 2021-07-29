@@ -14,7 +14,6 @@ namespace Exercise_3
             {
                 nums[i] = randNum.Next();
             }
-
             Console.WriteLine($"Number in the position {position} is {nums[position]}");
             Console.ReadKey();
         }
