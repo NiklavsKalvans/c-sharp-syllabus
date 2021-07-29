@@ -55,7 +55,6 @@ namespace TicTacToe
                         Tie();
                     }
                 }
-                    
                 Console.ReadKey();
             }
         }
@@ -66,7 +65,7 @@ namespace TicTacToe
             {
                 for (var c = 0; c < 3; c++)
                     board[r, c] = ' ';
-            } 
+            }
         }
 
         private static void DisplayBoard()
@@ -81,7 +80,7 @@ namespace TicTacToe
 
         public static void Tie()
         {
-            if(turn > 8)
+            if (turn > 8)
             {
                 playing = false;
                 Console.WriteLine("The game is a tie!");
@@ -90,102 +89,25 @@ namespace TicTacToe
 
         public static void WinCondition()
         {
-            if (board[0, 0] == board[0, 1] && board[0, 1] == board[0, 2] && board[0, 0] !=' ')
-            {
-                playing = false;
-                if (turn % 2 == 0)
+            if (board[0, 0] == board[0, 1] && board[0, 1] == board[0, 2] && board[0, 0] != ' '||
+                board[1, 0] == board[1, 1] && board[1, 1] == board[1, 2] && board[1, 0] != ' '||
+                board[2, 0] == board[2, 1] && board[2, 1] == board[2, 2] && board[2, 0] != ' '||
+                board[0, 0] == board[1, 0] && board[1, 0] == board[2, 0] && board[0, 0] != ' '||
+                board[0, 1] == board[1, 1] && board[1, 1] == board[2, 1] && board[0, 1] != ' '||
+                board[0, 2] == board[1, 2] && board[1, 2] == board[2, 2] && board[0, 2] != ' '||
+                board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2] && board[0, 0] != ' '||
+                board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0] && board[0, 2] != ' ')
                 {
-                    Console.WriteLine("Congrats on winning player 0, better luck next time player X");
+                    playing = false;
+                    if (turn % 2 == 0)
+                    {
+                        Console.WriteLine("Congrats on winning player 0, better luck next time player X");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Congrats on winning player X, better luck next time player 0");
+                    }
                 }
-                else
-                {
-                    Console.WriteLine("Congrats on winning player X, better luck next time player 0");
-                }
-            }
-            else if (board[1, 0] == board[1, 1] && board[1, 1] == board[1, 2] && board[1, 0] != ' ')
-            {
-                playing = false;
-                if (turn % 2 == 0)
-                {
-                    Console.WriteLine("Congrats on winning player 0, better luck next time player X");
-                }
-                else
-                {
-                    Console.WriteLine("Congrats on winning player X, better luck next time player 0");
-                }
-            }
-            else if (board[2, 0] == board[2, 1] && board[2, 1] == board[2, 2] && board[2, 0] != ' ')
-            {
-                playing = false;
-                if (turn % 2 == 0)
-                {
-                    Console.WriteLine("Congrats on winning player 0, better luck next time player X");
-                }
-                else
-                {
-                    Console.WriteLine("Congrats on winning player X, better luck next time player 0");
-                }
-            }
-            else if (board[0, 0] == board[1, 0] && board[1, 0] == board[2, 0] && board[0, 0] != ' ')
-            {
-                playing = false;
-                if (turn % 2 == 0)
-                {
-                    Console.WriteLine("Congrats on winning player 0, better luck next time player X");
-                }
-                else
-                {
-                    Console.WriteLine("Congrats on winning player X, better luck next time player 0");
-                }
-            }
-            else if (board[0, 1] == board[1, 1] && board[1, 1] == board[2, 1] && board[0, 1] != ' ')
-            {
-                playing = false;
-                if (turn % 2 == 0)
-                {
-                    Console.WriteLine("Congrats on winning player 0, better luck next time player X");
-                }
-                else
-                {
-                    Console.WriteLine("Congrats on winning player X, better luck next time player 0");
-                }
-            }
-            else if (board[0, 2] == board[1, 2] && board[1, 2] == board[2, 2] && board[0, 2] != ' ')
-            {
-                playing = false;
-                if (turn % 2 == 0)
-                {
-                    Console.WriteLine("Congrats on winning player 0, better luck next time player X");
-                }
-                else
-                {
-                    Console.WriteLine("Congrats on winning player X, better luck next time player 0");
-                }
-            }
-            else if (board[0, 0] == board[1, 1] && board[1, 1] == board[2, 2] && board[0, 0] != ' ')
-            {
-                playing = false;
-                if (turn % 2 == 0)
-                {
-                    Console.WriteLine("Congrats on winning player 0, better luck next time player X");
-                }
-                else
-                {
-                    Console.WriteLine("Congrats on winning player X, better luck next time player 0");
-                }
-            }
-            else if (board[0, 2] == board[1, 1] && board[1, 1] == board[2, 0] && board[0, 2] != ' ')
-            {
-                playing = false;
-                if (turn % 2 == 0)
-                {
-                    Console.WriteLine("Congrats on winning player 0, better luck next time player X");
-                }
-                else
-                {
-                    Console.WriteLine("Congrats on winning player X, better luck next time player 0");
-                }
-            }
         }
 
     }
