@@ -9,33 +9,22 @@ namespace Exercise_10
             Console.WriteLine("Enter the minimum and maximum number!");
             int min = int.Parse(Console.ReadLine());
             int max = int.Parse(Console.ReadLine());
-            int[] arr = new int[max];
-            int index = 0;
+
             for (int i = min; i <= max; i++)
             {
-                arr[index++] = i;
-            }
-            foreach (int num in arr)
-            {
-                Console.Write(num);
-            }
-            Console.WriteLine();
-            while (min < max)
-            {
-                for (int i = 0; i < arr.Length; i++)
+
+                for (int j = i; j <= max; j++)
                 {
-                    arr[i] = min + ++i;
-                    if (min + ++i > max)
-                    {
-                        arr[i] = min++;
-                    }
+                    Console.Write(j);
                 }
-                foreach (int num in arr)
+                for (int j = min; j < i; j++)
                 {
-                    Console.Write(num);
+                    Console.Write(j);
                 }
-                Console.WriteLine();
+                Console.WriteLine(); 
             }
-        }   
-    }
+        }
+
+    }   
+    
 }
