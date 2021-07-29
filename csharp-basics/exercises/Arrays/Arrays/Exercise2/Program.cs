@@ -20,6 +20,6 @@ namespace Exercise2
             }
             Console.WriteLine("The sum is " + sum);
             Console.ReadKey();
-            }
-        }
+        }    
+    }   
 }
