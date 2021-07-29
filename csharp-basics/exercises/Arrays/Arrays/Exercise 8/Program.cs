@@ -23,24 +23,27 @@ namespace Exercise_8
             var index = randGen.Next(0, 9);
             string mysteryWord = listwords[index];
             char[] guess = new char[mysteryWord.Length];
-            Console.Write("Please enter your guess: ");
-            int tries = 0;
-            string allGuesses = "";
             for (int p = 0; p < mysteryWord.Length; p++)
                 guess[p] = '_';
-            bool isPlaying = true;
 
-            while (isPlaying == true)
+            int tries = 0;
+            string allGuesses = "";
+            bool isPlaying = true;
+            Console.Write("Please enter your guess: ");
+
+            while (isPlaying)
             {
-                if (Convert.ToString(guess) == mysteryWord)
+                if (string.Join("", guess) == mysteryWord)
                 {
                     Console.WriteLine("You won!");
                     isPlaying = false;
+                    break;
                 }
-                else if (tries > 15)
+                else if (tries >= 15)
                 {
                     Console.WriteLine("You lose! try again!");
                     isPlaying = false;
+                    break;
                 }
 
                 char playerGuess = char.Parse(Console.ReadLine());
