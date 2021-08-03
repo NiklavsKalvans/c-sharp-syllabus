@@ -12,11 +12,11 @@ namespace Exercise_10
 
             for (int i = min; i <= max; i++)
             {
-
                 for (int j = i; j <= max; j++)
                 {
                     Console.Write(j);
                 }
+
                 for (int j = min; j < i; j++)
                 {
                     Console.Write(j);
