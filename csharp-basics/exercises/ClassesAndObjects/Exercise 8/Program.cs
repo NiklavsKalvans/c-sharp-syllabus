@@ -16,12 +16,11 @@ namespace Exercise_8
             double months = double.Parse(Console.ReadLine());
             double deposited = 0;
             double withdrawn = 0;
-
+           
             for (int i = 0; i < months; i++)
             {
                 double input1;
                 double input2;
-
                 Console.WriteLine("How much you wish to deposit?");
                 SavingsAccount.Deposit(acc, input1 = double.Parse(Console.ReadLine()));
                 deposited += input1;
@@ -30,9 +29,11 @@ namespace Exercise_8
                 withdrawn += input2;
                 SavingsAccount.AddMonthlyInterest(acc);
             }
+            double totalInterest = Math.Round(acc._balance - (amount + deposited), 2);
             Console.WriteLine($"Total deposited amount: {deposited}");
             Console.WriteLine($"Total withdrawn amount: {withdrawn}");
-            Console.WriteLine($"Final balance: { Math.Round(acc._balance, 2)}");
+            Console.WriteLine($"Total interest earned: {totalInterest}");
+            Console.WriteLine($"Final balance: {Math.Round(acc._balance, 2)}");
         }
     }
 }
