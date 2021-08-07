@@ -14,9 +14,9 @@ namespace Exercise_5
 
         public Date(int day, int month, int year)
         {
-            this._day = day;
-            this._month = month;
-            this._year = year;
+            _day = day;
+            _month = month;
+            _year = year;
         }
 
         public static void DisplayDate(Date date)

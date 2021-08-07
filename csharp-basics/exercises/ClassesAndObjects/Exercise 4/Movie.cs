@@ -14,16 +14,16 @@ namespace Exercise_4
 
         public Movie (string title, string studio, string rating)
         {
-            this._title = title;
-            this._studio = studio;
-            this._rating = rating;
+            _title = title;
+            _studio = studio;
+            _rating = rating;
         }
 
         public Movie (string title, string studio)
         {
-            this._title = title;
-            this._studio = studio;
-            this._rating = "PG";
+            _title = title;
+            _studio = studio;
+            _rating = "PG";
         }
     }
 }
