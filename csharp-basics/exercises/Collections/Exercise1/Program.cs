@@ -8,25 +8,25 @@ namespace Exercise1
 {
     class Program
     {
-        /**
-           * Origination:
-           * Audi -> Germany
-           * BMW -> Germany
-           * Honda -> Japan
-           * Mercedes -> Germany
-           * VolksWagen -> Germany
-           * Tesla -> USA
-           */
-
         private static void Main(string[] args)
         {
-            string[] array = { "Audi", "BMW", "Honda", "Mercedes", "VolksWagen", "Mercedes", "Tesla" };
+            string[] array = { "Audi", "BMW", "Honda", "Mercedes", "VolksWagen", "Tesla" };
 
-            //todo - replace array with an List and print out the results
+            List<string> carsList = new List<string>(array);
+            HashSet<string> carsHash = new HashSet<string>(array);
+            Dictionary<string, string> carsDictionary = new Dictionary<string, string>();
+            carsDictionary.Add("Audi", "Germany");
+            carsDictionary.Add("BMW", "Germany");
+            carsDictionary.Add("Honda", "Japan");
+            carsDictionary.Add("Mercedes", "Germany");
+            carsDictionary.Add("VolksWagen", "Germany");
+            carsDictionary.Add("Tesla", "USA");
 
-            //todo - replace array with a HashSet and print out the results
-
-            //todo - replace array with a Dictionary (use brand as key and origination as value) and print out the results
+            foreach (KeyValuePair<string, string> kvp in carsDictionary)
+            {
+                Console.WriteLine($"{kvp.Key} {kvp.Value}");
+            }
+            Console.ReadKey();
         }
     }
 }
