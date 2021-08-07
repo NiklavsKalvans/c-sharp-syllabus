@@ -10,6 +10,13 @@ namespace Account
     {
         private static void Main(string[] args)
         {
+            var myAccount = new Account("My account",0);
+            var mattsAccount = new Account("Matt's account", 1000);
+            mattsAccount.withdrawal(100);
+            myAccount.deposit(100);
+            Console.WriteLine(myAccount);
+            Console.WriteLine(mattsAccount);
+
             var aAccount = new Account("A account", 100.00);
             var bAccount = new Account("B account",0);
             var cAccount = new Account("C Account", 0);
