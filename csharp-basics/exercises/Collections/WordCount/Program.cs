@@ -14,12 +14,11 @@ namespace WordCount
         {
             string path = File.ReadAllText("C:\\Users\\nikla\\Desktop\\lear.txt");
 
-            string string1 = Regex.Replace(path, "[?!,.]", " ");
+            string string1 = Regex.Replace(path, "[?!,.']", " ");
             string string2 = Regex.Replace(string1, @"\s+", " ");
+            string2 = string2.Remove(string2.Length - 1, 1) + ".";
 
             Console.WriteLine(path);
-            Console.WriteLine(string2);
-
             Console.WriteLine("Total lines: " + path.Split('\r').Length);
             Console.WriteLine("Total words: " + string2.Split(' ').Length);
             Console.WriteLine("Total chars: " + path.Length);
