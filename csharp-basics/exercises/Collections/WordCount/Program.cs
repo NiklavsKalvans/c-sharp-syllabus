@@ -12,7 +12,7 @@ namespace WordCount
     {
         static void Main(string[] args)
         {
-            string path = File.ReadAllText("C:\\Users\\nikla\\Desktop\\lear.txt");
+            string path = File.ReadAllText("../../lear.txt");
 
             string string1 = Regex.Replace(path, "[?!,.']", " ");
             string string2 = Regex.Replace(string1, @"\s+", " ");
