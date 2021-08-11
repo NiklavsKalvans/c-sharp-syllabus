@@ -18,14 +18,14 @@ namespace Exercise_7
             Dog dog7 = new Dog(names[6], sex2);
             Dog dog8 = new Dog(names[7], sex2);
 
-            dog1._father = dog2._name;
-            dog1._mother = dog6._name;
-            dog8._father = dog4._name;
-            dog8._mother = dog7._name;
-            dog2._father = dog5._name;
-            dog2._mother = dog7._name;
-            dog4._father = dog3._name;
-            dog4._mother = dog6._name;
+            dog1.father = dog2.name;
+            dog1.mother = dog6.name;
+            dog8.father = dog4.name;
+            dog8.mother = dog7.name;
+            dog2.father = dog5.name;
+            dog2.mother = dog7.name;
+            dog4.father = dog3.name;
+            dog4.mother = dog6.name;
 
             Dog.FathersName(dog8);
             Dog.FathersName(dog3);

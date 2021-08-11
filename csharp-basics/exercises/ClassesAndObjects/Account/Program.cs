@@ -12,8 +12,8 @@ namespace Account
         {
             var myAccount = new Account("My account",0);
             var mattsAccount = new Account("Matt's account", 1000);
-            mattsAccount.withdrawal(100);
-            myAccount.deposit(100);
+            mattsAccount.Withdrawal(100);
+            myAccount.Deposit(100);
             Console.WriteLine(myAccount);
             Console.WriteLine(mattsAccount);
 
@@ -38,7 +38,7 @@ namespace Account
 
         public static void Transfer(Account from, Account to, double howMuch)
         {
-            to.deposit(from.withdrawal(howMuch));
+            to.Deposit(from.Withdrawal(howMuch));
         }
     }
 }

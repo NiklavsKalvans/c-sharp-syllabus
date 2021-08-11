@@ -8,7 +8,7 @@ namespace Exercise_5
         {
             Date date = new Date(27, 6, 1997);
             Date.DisplayDate(date);
-            date._year = 2021;
+            date.year = 2021;
             Date.DisplayDate(date);
         }
     }

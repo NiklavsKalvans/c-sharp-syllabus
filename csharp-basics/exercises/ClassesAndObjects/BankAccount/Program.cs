@@ -18,11 +18,11 @@ namespace BankAccount
 
         public static string ShowUserNameAndBalance(BankAccount acc)
         {
-            if (acc._balance >= 0)
-                return ($"{acc._name}, $") + string.Format("{0:F2}", acc._balance);
+            if (BankAccount.GetBalance(acc) >= 0)
+                return ($"{BankAccount.GetName(acc)}, $") + string.Format("{0:F2}", BankAccount.GetBalance(acc));
             else
                 acc._balance *= -1;
-                return ($"{acc._name}, -$") + string.Format("{0:F2}", acc._balance);
+                return ($"{BankAccount.GetName(acc)}, -$") + string.Format("{0:F2}", BankAccount.GetBalance(acc));
         }
     }
 }

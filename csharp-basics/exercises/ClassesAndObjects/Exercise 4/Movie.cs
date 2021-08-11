@@ -8,22 +8,22 @@ namespace Exercise_4
 {
     class Movie
     {
-        public string _title;
-        public string _studio;
-        public string _rating;
+        public string title;
+        public string studio;
+        public string rating;
 
-        public Movie (string title, string studio, string rating)
+        public Movie (string title1, string studio1, string rating1)
         {
-            _title = title;
-            _studio = studio;
-            _rating = rating;
+            title = title1;
+            studio = studio1;
+            rating = rating1;
         }
 
-        public Movie (string title, string studio)
+        public Movie (string title1, string studio1)
         {
-            _title = title;
-            _studio = studio;
-            _rating = "PG";
+            title = title1;
+            studio = studio1;
+            rating = "PG";
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Exercise_4
 
             for (int i = 0; i < movies.Length; i++)
             {
-                Console.WriteLine($"{movies[i]._title} {movies[i]._studio} {movies[i]._rating}");
+                Console.WriteLine($"{movies[i].title} {movies[i].studio} {movies[i].rating}");
             }
 
             Movie[] moviesPG = new Movie[movies.Length];
@@ -22,12 +22,12 @@ namespace Exercise_4
 
             for (int i = 0; i < moviesPG.Length; i++)
             {
-                Console.WriteLine($"{moviesPG[i]._title} {moviesPG[i]._studio} {moviesPG[i]._rating}");
+                Console.WriteLine($"{moviesPG[i].title} {moviesPG[i].studio} {moviesPG[i].rating}");
             }
         }
         public static Movie[] GetPG(Movie[] movies)
         {
-            return movies.Where(movie => movie._rating == "PG").ToArray();
+            return movies.Where(movie => movie.rating == "PG").ToArray();
         }
     }
 }

@@ -11,17 +11,17 @@
             _money = balace;
         }
 
-        public double withdrawal(double i)
+        public double Withdrawal(double i)
         {
             return _money -= i;
         }
 
-        public void deposit(double i)
+        public void Deposit(double i)
         {
             _money += i;
         }
 
-        public double balance()
+        public double Balance()
         {
             return _money;
         }
