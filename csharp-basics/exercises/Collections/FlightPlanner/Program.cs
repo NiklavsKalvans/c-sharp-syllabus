@@ -44,105 +44,100 @@ namespace FlightPlanner
                 switch (input)
                 {
                     case 1:
+                    {
+                        Travel(input, route, cities, citiesAndDestinations);
+                        if (route[0] == cities[input - 1] && route.Count > 1)
                         {
-                            Console.WriteLine($"You are at {cities[0]}. You can go to {citiesAndDestinations[cities[0]]} now!(6/3)");
-                            if(route.Count == 0) route.Add(cities[0]);
-                            else if (route[0] == cities[0])
-                            {
-                                route.Add(cities[0]);
-                                isTraveling = false;
-                                break;
-                            }
-                            else route.Add(cities[0]);
-                            input = int.Parse(Console.ReadLine());
-                            if (input != 6 || input != 3) input = pushToDefault;
+                            isTraveling = false;
                             break;
                         }
+                        input = int.Parse(Console.ReadLine());
+                        if (input != 6 && input != 3) input = pushToDefault;
+                        break;
+                    }
                     case 2:
+                    {
+                        Travel(input, route, cities, citiesAndDestinations);
+                        if (route[0] == cities[input - 1] && route.Count > 1)
                         {
-                            Console.WriteLine($"You are at {cities[1]}. You can go to {citiesAndDestinations[cities[1]]} now!(3/1/6/4)");
-                            if (route.Count == 0) route.Add(cities[1]);
-                            else if (route[0] == cities[1])
-                            {
-                                route.Add(cities[1]);
-                                isTraveling = false;
-                                break;
-                            }
-                            else route.Add(cities[1]);
-                            input = int.Parse(Console.ReadLine());
-                            if (input != 3 || input != 1 || input != 6 || input != 4) input = pushToDefault;
+                            isTraveling = false;
                             break;
                         }
+                        input = int.Parse(Console.ReadLine());
+                        if (input != 3 && input != 1 && input != 6 && input != 4) input = pushToDefault;
+                        break;
+                    }
                     case 3:
+                    {
+                        Travel(input, route, cities, citiesAndDestinations);
+                        if (route[0] == cities[input - 1] && route.Count > 1)
                         {
-                            Console.WriteLine($"You are at {cities[2]}. You can go to {citiesAndDestinations[cities[2]]} now!(2/1)");
-                            if (route.Count == 0) route.Add(cities[2]);
-                            else if (route[0] == cities[2])
-                            {
-                                route.Add(cities[2]);
-                                isTraveling = false;
-                                break;
-                            }
-                            else route.Add(cities[2]);
-                            input = int.Parse(Console.ReadLine());
-                            if (input != 2 || input != 1) input = pushToDefault;
+                            isTraveling = false;
                             break;
                         }
+                        input = int.Parse(Console.ReadLine());
+                        if (input != 2 && input != 1) input = pushToDefault;
+                        break;
+                    }
                     case 4:
+                    {
+                        Travel(input, route, cities, citiesAndDestinations);
+                        if (route[0] == cities[input - 1] && route.Count > 1)
                         {
-                            Console.WriteLine($"You are at {cities[3]}. You can go to {citiesAndDestinations[cities[3]]} now!(2/6)");
-                            if (route.Count == 0) route.Add(cities[3]);
-                            else if (route[0] == cities[3])
-                            {
-                                route.Add(cities[3]);
-                                isTraveling = false;
-                                break;
-                            }
-                            else route.Add(cities[3]);
-                            input = int.Parse(Console.ReadLine());
-                            if (input != 2 || input != 6) input = pushToDefault;
+                            isTraveling = false;
                             break;
                         }
+                        input = int.Parse(Console.ReadLine());
+                        if (input != 2 && input != 6) input = pushToDefault;
+                        break;
+                    }
                     case 5:
+                    {
+                        Travel(input, route, cities, citiesAndDestinations);
+                        if (route[0] == cities[input - 1] && route.Count > 1)
                         {
-                            Console.WriteLine($"You are at {cities[4]}. You can go to {citiesAndDestinations[cities[4]]} now!(1)");
-                            if (route.Count == 0) route.Add(cities[4]);
-                            else if (route[0] == cities[4])
-                            {
-                                route.Add(cities[4]);
-                                isTraveling = false;
-                                break;
-                            }
-                            else route.Add(cities[4]);
-                            input = int.Parse(Console.ReadLine());
-                            if (input != 1) input = pushToDefault;
+                            isTraveling = false;
                             break;
                         }
+                        input = int.Parse(Console.ReadLine());
+                        if (input != 1) input = pushToDefault;
+                        break;
+                    }
                     case 6:
+                    {
+                        Travel(input, route, cities, citiesAndDestinations);
+                        if (route[0] == cities[input - 1] && route.Count > 1)
                         {
-                            Console.WriteLine($"You are at {cities[5]}. You can go to {citiesAndDestinations[cities[5]]} now!(2/4/5)");
-                            if (route.Count == 0) route.Add(cities[5]);
-                            else if (route[0] == cities[5])
-                            {
-                                route.Add(cities[5]);
-                                isTraveling = false;
-                                break;
-                            }
-                            else route.Add(cities[5]);
-                            input = int.Parse(Console.ReadLine());
-                            if (input != 2 || input != 4 || input != 5) input = pushToDefault;
+                            isTraveling = false;
                             break;
                         }
+                        input = int.Parse(Console.ReadLine());
+                        if (input != 2 && input != 4 && input != 5) input = pushToDefault;
+                        break;
+                    }
                     default:
+                    {
                         Console.WriteLine("You have selected an invalid option. You have to start over.");
                         isTraveling = false;
                         break;
+                    }
                 }
             }
             Console.WriteLine();
             Console.WriteLine("This was your travel route:");
             Console.WriteLine(string.Join("-> ", route));
             Console.ReadKey();
+        }
+        public static void Travel(int input, List<string> route, List<string> cities, Dictionary<string, string> citiesAndDestinations)
+        {
+            if (input == 1) Console.WriteLine($"You are at {cities[0]}. You can go to {citiesAndDestinations[cities[0]]} now!(6/3)");
+            else if (input == 2) Console.WriteLine($"You are at {cities[1]}. You can go to {citiesAndDestinations[cities[1]]} now!(3/1/6/4)");
+            else if (input == 3) Console.WriteLine($"You are at {cities[2]}. You can go to {citiesAndDestinations[cities[2]]} now!(2/1)");
+            else if (input == 4) Console.WriteLine($"You are at {cities[3]}. You can go to {citiesAndDestinations[cities[3]]} now!(2/6)");
+            else if (input == 5) Console.WriteLine($"You are at {cities[4]}. You can go to {citiesAndDestinations[cities[4]]} now!(1)");
+            else if (input == 6) Console.WriteLine($"You are at {cities[5]}. You can go to {citiesAndDestinations[cities[5]]} now!(2/4/5)");
+            route.Add(cities[input - 1]);
+            if (route[0] == cities[input - 1] && route.Count > 1) Console.WriteLine("Your trip is finished!");
         }
     }
 }
