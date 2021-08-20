@@ -5,11 +5,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{1741A430-AB51-4724-8243-B7E8D8D46B0B}</ProjectGuid>
+    <ProjectGuid>{21961F06-0811-4598-97E5-AC6E0B08D47F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Exercise_6_test</RootNamespace>
-    <AssemblyName>Exercise 6 test</AssemblyName>
+    <RootNamespace>Exercise6.Tests</RootNamespace>
+    <AssemblyName>Exercise6.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,16 +49,16 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ArrayExercise6Tests.cs" />
+    <Compile Include="Exercise6Tests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Exercise 6\Exercise 6.csproj">
-      <Project>{afaa23f0-28df-4183-b4f8-bb9e89759fd4}</Project>
-      <Name>Exercise 6</Name>
+    <ProjectReference Include="..\Exercise6\Exercise6.csproj">
+      <Project>{b89ce646-d64c-45ee-851e-a1ae96d23418}</Project>
+      <Name>Exercise6</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />

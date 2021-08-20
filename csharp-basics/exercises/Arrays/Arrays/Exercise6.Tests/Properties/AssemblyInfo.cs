@@ -2,18 +2,18 @@ using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
 
-[assembly: AssemblyTitle("Exercise 6 test")]
+[assembly: AssemblyTitle("Exercise6.Tests")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP")]
-[assembly: AssemblyProduct("Exercise 6 test")]
+[assembly: AssemblyProduct("Exercise6.Tests")]
 [assembly: AssemblyCopyright("Copyright © HP 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
 [assembly: ComVisible(false)]
 
-[assembly: Guid("1741a430-ab51-4724-8243-b7e8d8d46b0b")]
+[assembly: Guid("21961f06-0811-4598-97e5-ac6e0b08d47f")]
 
 // [assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyVersion("1.0.0.0")]
