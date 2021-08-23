@@ -8,19 +8,34 @@ namespace CalculateArea
 {
     public class Geometry
     {
-        public static double areaOfCircle(decimal radius)
+        public static double AreaOfCircle(double radius)
         {
-            throw new NotImplementedException();
+            if (radius <= 0)
+            {
+                throw new ArgumentException("Radius must be a positive number");
+            }
+            double area = Convert.ToDouble(Math.PI) * (radius) * 2;
+            return area;
         }
 
-        public static double areaOfRectangle(decimal length, decimal width)
+        public static double AreaOfRectangle(double length, double width)
         {
-            throw new NotImplementedException();
+            if (length <= 0 || width <= 0)
+            {
+                throw new ArgumentException("Both lenght and width must be positive numbers");
+            }
+            double area = length * width;
+            return area;
         }
 
-        public static double areaOfTriangle(decimal ground, decimal h)
+        public static double AreaOfTriangle(double ground, double h)
         {
-            throw new NotImplementedException();
+            if (ground <= 0 || h <= 0)
+            {
+                throw new ArgumentException("Both base and height must be positive numbers");
+            }
+            double area = h * ground * 0.5;
+            return area;
         }
     }
 }
