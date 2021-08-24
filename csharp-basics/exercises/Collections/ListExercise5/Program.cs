@@ -20,9 +20,8 @@ namespace ListExercise5
             };
 
             Console.WriteLine(string.Join(",", colors));
-
-            //TODO: Change the third element with "Yellow"
-
+            colors.RemoveAt(2);
+            colors.Insert(2, "Yellow");
             Console.WriteLine(string.Join(",", colors));
         }
     }
