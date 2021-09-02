@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Exercise1
+namespace Arithmetics1
 {
     public class Program
     {
@@ -17,7 +17,7 @@ namespace Exercise1
             Console.WriteLine(result);
             Console.ReadKey();
         }
-        
+
         public static bool IsEitherNumFifteenOrIsSumOrDiffFifteen(int num1, int num2)
         {
             return num1 == 15 || num2 == 15 || num1 + num2 == 15 || num1 - num2 == 15 || num2 - num1 == 15;

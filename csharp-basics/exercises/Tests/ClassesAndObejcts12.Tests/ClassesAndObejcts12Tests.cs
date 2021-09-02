@@ -11,7 +11,7 @@ namespace ClassesAndObejcts12.Tests
         public void Account_CreatingNewAccount_NameTestAccountBalance100()
         {
             //Arrange
-            var expected = new Account.Account("TestAccount", 100.0);
+            var expected = "TestAccount: 100";
 
             //Act
             var testAccount = new Account.Account("TestAccount", 100.0);
@@ -24,7 +24,7 @@ namespace ClassesAndObejcts12.Tests
         public void Withdrawal_Balance100_NewBalance80()
         {
             //Arrange
-            var expected = new Account.Account("TestAccount", 80.0);
+            var expected = "TestAccount: 80";
             var testAccount = new Account.Account("TestAccount", 100.0);
 
             //Act
@@ -38,7 +38,7 @@ namespace ClassesAndObejcts12.Tests
         public void Deposit_Balance100_NewBalance120()
         {
             //Arrange
-            var expected = new Account.Account("TestAccount", 120);
+            var expected = "TestAccount: 120";
             var testAccount = new Account.Account("TestAccount", 100.0);
 
             //Act
@@ -68,8 +68,8 @@ namespace ClassesAndObejcts12.Tests
             //Arrange
             var testAccount = new Account.Account("TestAccount", 100.0);
             var testAccount2 = new Account.Account("TestAccount2", 0.0);
-            var expected1 = new Account.Account("TestAccount", 80.0);
-            var expected2 = new Account.Account("TestAccount2", 20.0);
+            var expected1 = "TestAccount: 80";
+            var expected2 = "TestAccount2: 20"; ;
 
             //Act
             Program.Transfer(testAccount, testAccount2, 20.0);
