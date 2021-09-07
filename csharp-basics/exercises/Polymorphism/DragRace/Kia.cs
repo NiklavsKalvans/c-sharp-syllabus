@@ -1,32 +1,27 @@
-using System;
+﻿using System;
 
 namespace DragRace
 {
-    public class Lexus : ICar, IBoost
+    public class Kia : ICar
     {
         private int currentSpeed = 0;
 
-        public void SpeedUp() 
+        public void SpeedUp()
         {
             currentSpeed++;
         }
 
-        public void SlowDown() 
+        public void SlowDown()
         {
             currentSpeed--;
         }
 
-        public string ShowCurrentSpeed() 
+        public string ShowCurrentSpeed()
         {
             return currentSpeed.ToString();
         }
 
-        public void UseNitrousOxideEngine() 
-        {
-            currentSpeed++;
-        }
-
-        public void StartEngine() 
+        public void StartEngine()
         {
             Console.WriteLine("Rrrrrrr.....");
         }
